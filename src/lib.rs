@@ -20,6 +20,9 @@ pub fn decode_byte(char_index: u8) -> char {
 pub fn decode_bytes(bytes: &[u8]) -> String {
     let mut strlen = 0;
     loop {
+        if strlen == bytes.len() {
+            break;
+        }
         if bytes[strlen] == 0 {
             break;
         }
